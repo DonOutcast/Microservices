@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  redis:
+    container_name: ${REDIS_CONTAINER_NAME}
+    image: ${REDIS_IMAGE_NAME}
+    ports:
+      - ${REDIS_EXTERNAL_PORT}:${REDIS_INTERNAL_PORT}
+    build:
+      context: devops/redis/
+      dockerfile: Dockerfile
+
